@@ -20,7 +20,6 @@ public class MyApp extends Application {
     private String server_ip;
     private int server_port;
     private String room_number;
-    private int current_drawer;
 
     public void setUserName(String userName){
         this.user_name = userName;
@@ -62,9 +61,6 @@ public class MyApp extends Application {
         this.room_number = roomNumber;
     }
 
-    public void setCurrentDrawer(int currentDrawer){
-        this.current_drawer = currentDrawer;
-    }
     public String getUserName(){
         return user_name;
     }
@@ -105,14 +101,10 @@ public class MyApp extends Application {
         return room_number;
     }
 
-    public int getCurrentDrawer(){
-        return current_drawer;
-    }
     @Override
     public void onCreate(){
         super.onCreate();
-        server_ip = "172.20.10.10";
+        server_ip = "192.168.43.24";
         server_port = 8000;
-        current_drawer = 0;
     }
 }
