@@ -16,8 +16,6 @@ import android.widget.TextView;
 public class Welcome extends Activity {
     private Button createRoom;
     private Button joinRoom;
-    private Button settings;
-    private Button aboutUs;
     private TextView welcome;
     private MyApp myApp;
 
@@ -28,8 +26,6 @@ public class Welcome extends Activity {
         setContentView(R.layout.after_log_in);
         createRoom =(Button)findViewById(R.id.createRoom);
         joinRoom =(Button)findViewById(R.id.joinRoom);
-        settings=(Button)findViewById(R.id.settings);
-        aboutUs=(Button)findViewById(R.id.about);
         welcome=(TextView)findViewById(R.id.currentUserName);
         String title = "欢迎"+myApp.getUserName();
         welcome.setText(title);
@@ -50,20 +46,5 @@ public class Welcome extends Activity {
             }
         });
 
-        settings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Welcome.this, Settings.class);
-                startActivity(intent);
-            }
-        });
-
-        aboutUs.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Welcome.this, About.class);
-                startActivity(intent);
-            }
-        });
     }
 }
